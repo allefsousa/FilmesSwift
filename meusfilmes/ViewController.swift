@@ -15,10 +15,22 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         var filme:Filme
         
-        filme = Filme(titulo: "Filme 1", descricao: "DESCRICAO 1")
+        filme = Filme(titulo: "Filme 1", descricao: "DESCRICAO 1",ima:#imageLiteral(resourceName: "filme7"))
         filmes.append(filme)
         
-        filme = Filme(titulo: "Filme 1", descricao: "DESCRICAO 1")
+        filme = Filme(titulo: "Filme 1", descricao: "DESCRICAO 1", ima:#imageLiteral(resourceName: "filme4"))
+        filmes.append(filme)
+        filme = Filme(titulo: "Filme 1", descricao: "DESCRICAO 1", ima:#imageLiteral(resourceName: "filme4"))
+        filmes.append(filme)
+        filme = Filme(titulo: "Filme 1", descricao: "DESCRICAO 1", ima:#imageLiteral(resourceName: "filme4"))
+        filmes.append(filme)
+        filme = Filme(titulo: "Filme 1", descricao: "DESCRICAO 1", ima:#imageLiteral(resourceName: "filme4"))
+        filmes.append(filme)
+        filme = Filme(titulo: "Filme 1", descricao: "DESCRICAO 1", ima:#imageLiteral(resourceName: "filme4"))
+        filmes.append(filme)
+        filme = Filme(titulo: "Filme 1", descricao: "DESCRICAO 1", ima:#imageLiteral(resourceName: "filme4"))
+        filmes.append(filme)
+        filme = Filme(titulo: "Filme 1", descricao: "DESCRICAO 1", ima:#imageLiteral(resourceName: "filme4"))
         filmes.append(filme)
         
     }
@@ -33,18 +45,20 @@ class ViewController: UITableViewController {
         return filmes.count
     }
     
-    // metodo que preenche a view
+    // metodo que preenche a view de maneira padrão
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let filme = filmes[indexPath.row] 
+        let filme = filmes[indexPath.row]
         let celula = "fil"
         let celul = tableView.dequeueReusableCell(withIdentifier: celula, for: indexPath)
         celul.textLabel?.text = filme.titulo
+        celul.imageView?.image = filme.imagem
+        tableView.separatorStyle = .none
         
         return celul
         
     }
-
+    
 
 }
 

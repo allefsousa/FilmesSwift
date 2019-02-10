@@ -12,9 +12,11 @@ class Filme {
     var titulo:String!
     var descricao:String!
     var imagem:UIImage!
-    init(titulo:String,descricao:String) {
+    
+    init(titulo:String,descricao:String,ima:UIImage) {
         self.titulo = titulo
         self.descricao = descricao
+        self.imagem = ima
     
     }
     
