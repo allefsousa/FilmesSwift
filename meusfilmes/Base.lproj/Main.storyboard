@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,8 +33,8 @@
                                                 <constraint firstAttribute="width" constant="84" id="PR8-Gd-yol"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gGY-hi-MwC">
-                                            <rect key="frame" x="99" y="27" width="44.5" height="46"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="gGY-hi-MwC">
+                                            <rect key="frame" x="99" y="24.5" width="44.5" height="51"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dII-kC-vnZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
@@ -42,7 +43,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pt-26-AMN">
-                                                    <rect key="frame" x="0.0" y="29.5" width="44.5" height="16.5"/>
+                                                    <rect key="frame" x="0.0" y="34.5" width="44.5" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <color key="textColor" red="0.49283309028841471" green="0.53442723875192066" blue="0.56747501425329938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -61,6 +62,7 @@
                                     <outlet property="imageFilme" destination="bEN-cy-ElK" id="Dod-Ea-Miy"/>
                                     <outlet property="labelDescription" destination="3pt-26-AMN" id="lMm-EG-1iU"/>
                                     <outlet property="labelTilte" destination="dII-kC-vnZ" id="sRt-h0-FaG"/>
+                                    <segue destination="Oef-GF-sjq" kind="show" identifier="detalheFilme" id="6Ws-uB-jP0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -74,6 +76,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkw-BO-w0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="981.60000000000002" y="101.19940029985008"/>
+        </scene>
+        <!--Detalhes Filmes-->
+        <scene sceneID="rSf-cF-hRj">
+            <objects>
+                <viewController id="Oef-GF-sjq" customClass="detalhesFilmes" customModule="meusfilmes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Yo-Kk-6e8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8O-VQ-GY0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="387"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUF-tk-gwH">
+                                <rect key="frame" x="7" y="459" width="53" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8I-4b-BqZ">
+                                <rect key="frame" x="7" y="503" width="352" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R8I-4b-BqZ" firstAttribute="leading" secondItem="ekl-Ew-EjZ" secondAttribute="leading" constant="7" id="5PW-eG-EbU"/>
+                            <constraint firstItem="V8O-VQ-GY0" firstAttribute="top" secondItem="ekl-Ew-EjZ" secondAttribute="top" id="6eT-dG-BC3"/>
+                            <constraint firstItem="ekl-Ew-EjZ" firstAttribute="trailing" secondItem="R8I-4b-BqZ" secondAttribute="trailing" constant="16" id="7uJ-UO-heM"/>
+                            <constraint firstItem="EUF-tk-gwH" firstAttribute="top" secondItem="V8O-VQ-GY0" secondAttribute="bottom" constant="15" id="Zhz-KQ-BUY"/>
+                            <constraint firstItem="EUF-tk-gwH" firstAttribute="leading" secondItem="ekl-Ew-EjZ" secondAttribute="leading" constant="7" id="d93-tx-XtN"/>
+                            <constraint firstItem="R8I-4b-BqZ" firstAttribute="top" secondItem="EUF-tk-gwH" secondAttribute="bottom" constant="20" id="dXi-xO-tTy"/>
+                            <constraint firstItem="V8O-VQ-GY0" firstAttribute="trailing" secondItem="ekl-Ew-EjZ" secondAttribute="trailing" id="kdg-VY-3lE"/>
+                            <constraint firstItem="V8O-VQ-GY0" firstAttribute="leading" secondItem="ekl-Ew-EjZ" secondAttribute="leading" id="pFR-HL-iOr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ekl-Ew-EjZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="descricaoFilme" destination="R8I-4b-BqZ" id="jIl-oX-smB"/>
+                        <outlet property="image" destination="V8O-VQ-GY0" id="WdI-yw-fPe"/>
+                        <outlet property="nomeFilme" destination="EUF-tk-gwH" id="TC8-c8-QTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2aS-I4-5pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717.5999999999999" y="100.29985007496252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JEf-Ix-PFk">

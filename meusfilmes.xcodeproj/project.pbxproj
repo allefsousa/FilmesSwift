@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB4B937F2210B18C003C7300 /* detalhesFilme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4B937E2210B18C003C7300 /* detalhesFilme.swift */; };
 		FBB0DDAF220FC31B00512D34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB0DDAE220FC31B00512D34 /* AppDelegate.swift */; };
 		FBB0DDB1220FC31B00512D34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB0DDB0220FC31B00512D34 /* ViewController.swift */; };
 		FBB0DDB4220FC31B00512D34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB0DDB2220FC31B00512D34 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB4B937E2210B18C003C7300 /* detalhesFilme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalhesFilme.swift; sourceTree = "<group>"; };
 		FBB0DDAB220FC31B00512D34 /* meusfilmes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meusfilmes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB0DDAE220FC31B00512D34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBB0DDB0220FC31B00512D34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				FBB0DDB7220FC31C00512D34 /* LaunchScreen.storyboard */,
 				FBB0DDBA220FC31C00512D34 /* Info.plist */,
 				FBB0DDC0220FC40200512D34 /* Filme.swift */,
+				FB4B937E2210B18C003C7300 /* detalhesFilme.swift */,
 			);
 			path = meusfilmes;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB0DDB1220FC31B00512D34 /* ViewController.swift in Sources */,
+				FB4B937F2210B18C003C7300 /* detalhesFilme.swift in Sources */,
 				FBF63DBD22106CA300BEFF2E /* cell.swift in Sources */,
 				FBB0DDC1220FC40200512D34 /* Filme.swift in Sources */,
 				FBB0DDAF220FC31B00512D34 /* AppDelegate.swift in Sources */,
