@@ -50,11 +50,16 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let filme = filmes[indexPath.row]
         let celula = "fil"
-        let celul = tableView.dequeueReusableCell(withIdentifier: celula, for: indexPath)
-        celul.textLabel?.text = filme.titulo
+        let celul = tableView.dequeueReusableCell(withIdentifier: celula, for: indexPath) as! cell
+        celul.imageFilme.image = filme.imagem
+        celul.labelTilte.text = filme.titulo
+        celul.labelDescription.text = filme.descricao
+        
+        
+        /*celul.textLabel?.text = filme.titulo
         celul.imageView?.image = filme.imagem
         tableView.separatorStyle = .none
-        
+        */
         return celul
         
     }
